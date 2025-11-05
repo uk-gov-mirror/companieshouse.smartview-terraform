@@ -40,6 +40,6 @@ data "vault_generic_secret" "smartview_app_cidrs" {
   path = "applications/${var.aws_profile}/smartview/app_cidrs"
 }
 
-data "vault_generic_secret" "internal_cidrs" {
-  path = "aws-accounts/network/internal_cidr_ranges"
+data "aws_ec2_managed_prefix_list" "admin" {
+  name = "administration-cidr-ranges"
 }

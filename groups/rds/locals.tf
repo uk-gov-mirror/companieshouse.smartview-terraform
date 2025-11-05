@@ -2,7 +2,6 @@
 # Locals
 # ------------------------------------------------------------------------
 locals {
-  admin_cidrs        = values(data.vault_generic_secret.internal_cidrs.data)
   app_cidrs          = values(data.vault_generic_secret.smartview_app_cidrs.data)
   smartview_rds_data = data.vault_generic_secret.smartview_rds.data
 
